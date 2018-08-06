@@ -44,14 +44,14 @@ workflows:
             branches:
               only: master
           requires:
-            - hold
+            - build
       - hold:
           type: approval
           requires:
-            - build
+            - deploy-to-staging
       - deploy-to-production:
         filters:
             branches:
               only: master
           requires: 
-            - hold 
+            - hold
