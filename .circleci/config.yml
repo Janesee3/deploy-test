@@ -49,9 +49,9 @@ workflows:
           type: approval
           requires:
             - deploy-to-staging
-      - deploy-to-production:
-          filters:
-              branches:
-                only: master
-            requires: 
-              - hold
+      # - deploy-to-production:
+      #     filters:
+      #         branches:
+      #           only: master
+      #       requires: 
+      #         - hold
